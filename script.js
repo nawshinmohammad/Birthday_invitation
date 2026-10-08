@@ -198,7 +198,7 @@ function toggleMusic() {
 */
 
 const birthdayDate =
-    new Date("2026-10-12T02:00:00").getTime();
+    new Date("2026-10-12T14:00:00").getTime();
 
 
 
