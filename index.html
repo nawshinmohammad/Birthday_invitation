@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Nawshin's Birthday Invitation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         FLOATING FLOWERS / PETALS
+    ========================================== -->
+
+    <div class="petals">
+
+        <span>🌸</span>
+        <span>🌷</span>
+        <span>🌸</span>
+        <span>🌺</span>
+        <span>🌷</span>
+        <span>🌸</span>
+        <span>🌺</span>
+        <span>🌸</span>
+
+    </div>
+
+
+    <!-- =========================================
+         ENVELOPE SCREEN
+    ========================================== -->
+
+    <section id="envelope-screen"
+             class="envelope-screen">
+
+
+        <div class="intro-text">
+
+            <p class="mini-title">
+                A little surprise awaits...
+            </p>
+
+            <h1>
+                You Have A
+                <span>Special Invitation</span>
+            </h1>
+
+        </div>
+
+
+        <!-- Envelope -->
+
+        <div class="envelope-container"
+             onclick="openEnvelope()">
+
+
+            <div class="envelope">
+
+                <div class="envelope-back"></div>
+
+                <div class="envelope-flap"></div>
+
+                <div class="envelope-front"></div>
+
+                <div class="letter">
+
+                    <div class="letter-content">
+
+                        <span>💌</span>
+
+                        <p>
+                            Open Me
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <p class="click-text">
+            Tap the envelope to open
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         NAME SCREEN
+    ========================================== -->
+
+    <section id="name-screen"
+             class="name-screen hidden">
+
+
+        <div class="name-card">
+
+            <div class="gold-line"></div>
+
+            <p class="small-heading">
+                BEFORE WE BEGIN
+            </p>
+
+            <h1>
+                May I Know
+                <span>Your Name?</span>
+            </h1>
+
+            <p class="description">
+                I'd love to welcome you personally
+                to my special day.
+            </p>
+
+
+            <input
+                type="text"
+                id="guestName"
+                placeholder="Enter your name"
+                autocomplete="off"
+            >
+
+
+            <button onclick="showInvitation()">
+                Continue
+                <span>→</span>
+            </button>
+
+
+            <p id="error-message"></p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         MAIN INVITATION
+    ========================================== -->
+
+    <main id="invitation"
+          class="invitation hidden">
+
+
+        <!-- Music button -->
+
+        <button id="musicButton"
+                class="music-button"
+                onclick="toggleMusic()">
+
+            🎵
+
+        </button>
+
+
+        <div class="invitation-card">
+
+
+            <!-- Decorative top -->
+
+            <div class="top-decoration">
+
+                <span>✦</span>
+
+                <span>♡</span>
+
+                <span>✦</span>
+
+            </div>
+
+
+            <!-- Guest name -->
+
+            <p id="helloText"
+               class="guest-greeting">
+
+                Hello!
+
+            </p>
+
+
+            <p class="invite-small">
+                YOU ARE WARMLY INVITED
+            </p>
+
+
+            <h1 class="birthday-title">
+
+                Nawshin's
+
+                <span>
+                    Birthday Celebration
+                </span>
+
+            </h1>
+
+
+            <div class="ornament">
+
+                <span></span>
+
+                <b>✦</b>
+
+                <span></span>
+
+            </div>
+
+
+            <p class="main-message">
+
+                Come celebrate another beautiful
+                chapter of life with me.
+
+            </p>
+
+
+            <div class="cake">
+                🎂
+            </div>
+
+
+
+            <!-- =================================
+                 EVENT DETAILS
+            ================================== -->
+
+            <div class="event-details">
+
+
+                <div class="detail">
+
+                    <div class="detail-icon">
+                        ♡
+                    </div>
+
+                    <div>
+
+                        <small>DATE</small>
+
+                        <p>
+                            12 October 2026
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="detail-icon">
+                        ♡
+                    </div>
+
+                    <div>
+
+                        <small>TIME</small>
+
+                        <p>
+                            2:00 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="detail-icon">
+                        ♡
+                    </div>
+
+                    <div>
+
+                        <small>VENUE</small>
+
+                        <p>
+                            RISO Khilgaon
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 COUNTDOWN
+            ================================== -->
+
+            <div class="countdown-section">
+
+                <p class="countdown-title">
+                    COUNTING DOWN TO THE CELEBRATION
+                </p>
+
+
+                <div class="countdown">
+
+
+                    <div class="time-box">
+
+                        <span id="days">
+                            00
+                        </span>
+
+                        <small>
+                            DAYS
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="hours">
+                            00
+                        </span>
+
+                        <small>
+                            HOURS
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="minutes">
+                            00
+                        </span>
+
+                        <small>
+                            MINUTES
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="seconds">
+                            00
+                        </span>
+
+                        <small>
+                            SECONDS
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 GREETING
+            ================================== -->
+
+            <div class="greeting-box">
+
+                <p class="quote">
+
+                    "The best moments in life are
+                    the ones shared with the people
+                    who make our hearts smile."
+
+                </p>
+
+
+                <p class="welcome-message">
+
+                    Your presence will make my
+                    celebration even more special.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 MAP BUTTON
+            ================================== -->
+
+            <a
+                href="https://maps.app.goo.gl/Uvyk5qqjmhXV7rAB7"
+                target="_blank"
+                class="map-button"
+            >
+
+                📍 View Venue on Google Maps
+
+            </a>
+
+
+
+            <!-- =================================
+                 FOOTER
+            ================================== -->
+
+            <div class="footer">
+
+                <p>
+                    With love,
+                </p>
+
+                <h2>
+                    Nawshin
+                </h2>
+
+                <div class="footer-heart">
+                    ♡
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================================
+         BACKGROUND MUSIC
+    ========================================== -->
+
+    <audio id="birthdayMusic"
+           loop>
+
+        <source
+            src="music/the_mountain-happy-birthday-576570.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
